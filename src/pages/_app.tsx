@@ -5,7 +5,6 @@ import { AppProps } from 'next/app'
 import { ToastContainer } from 'react-toastify'
 
 import useLoadTheme from '../hooks/useLoadTheme'
-import Navbar from '../components/layout/Navbar'
 
 import { ApolloProvider } from '@apollo/client'
 import client from '../apollo'
@@ -17,7 +16,6 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   return (
     <main>
       <ApolloProvider client={client}>
-        <Navbar />
         <Component {...pageProps} />
         <ToastContainer />
       </ApolloProvider>
