@@ -9,7 +9,8 @@ interface ButtonColors {
 
 export const variants: Record<ButtonVariant, ButtonColors> = {
   solid: {
-    primary: 'text-white border-transparent bg-primary hover:bg-primary-500',
+    primary:
+      'text-white border-transparent border-0 bg-gradient-to-r from-primary to-primary hover:from-[#f9b53a] hover:to-[#ff59a8]',
     secondary:
       'text-white border-transparent bg-secondary hover:bg-secondary-500',
     white: 'text-secondary border-transparent bg-white hover:bg-gray-200'

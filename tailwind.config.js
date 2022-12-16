@@ -1,5 +1,4 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const { themes } = require('./tailwind/theme.js')
 
 module.exports = {
   content: [
@@ -12,30 +11,13 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          50: '#ffe3e3',
-          100: '#ffb3b4',
-          200: '#fc8384',
-          300: '#f95353',
-          400: '#f62423',
-          500: '#dc0d09',
-          600: '#ac0606',
-          700: '#7c0203',
-          800: '#4c0001',
-          900: '#1f0000',
-          DEFAULT: '#f95959'
-        },
-        secondary: {
-          50: '#eaf3fb',
-          100: '#cdd8e5',
-          200: '#adbed1',
-          300: '#8ca4be',
-          400: '#6d8aac',
-          500: '#537092',
-          600: '#415773',
-          700: '#2d3e52',
-          800: '#1a2532',
-          900: '#060c15',
-          DEFAULT: '#455d7a'
+          50: '#171718',
+          100: '#17171865',
+          200: '#857070',
+          300: '#a0a0a1',
+          400: '#1f1f21',
+          500: '#00000080',
+          DEFAULT: '#f9b53a'
         }
       },
       fontFamily: {

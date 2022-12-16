@@ -1,5 +1,11 @@
+import Navbar from '@components/layout/Navbar'
+
 const Home = () => {
-  return <h1>Hola</h1>
+  return (
+    <>
+      <Navbar />
+    </>
+  )
 }
 
 export default Home

@@ -1,20 +1,58 @@
-import NextLink from 'next/link'
-import ToggleTheme from '../../shared/ToggleTheme'
-import IconEscudoPeru from '../../../icons/IconEscudoPeru'
+import Button from '@components/shared/Button'
+import Icon from '@components/shared/Icon'
+import Image from 'next/image'
+import { useState } from 'react'
 
 const Navbar = () => {
+  const [isActive, setIsActive] = useState(false)
   return (
     <>
-      <header className="shadow bg-primary-500">
-        <nav className="container flex justify-between py-2">
-          <NextLink href="/">
-            <a>
-              <IconEscudoPeru />
-            </a>
-          </NextLink>
+      <header className="w-full ">
+        <div className="flex justify-between max-w-5xl mx-auto p-4 relative items-center">
+          <a className="logo relative w-[31px] h-[34px]">
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              className="w-full h-full"
+              layout="fill"
+            />
+          </a>
 
-          <ToggleTheme className="text-white" />
-        </nav>
+          <div
+            className={`${
+              isActive ? 'left-0' : 'left-[-100%]'
+            } absolute flex flex-col top-[66px] bg-primary-100 right-0  transition-all duration-1000 md:static md:flex-row`}
+          >
+            <a
+              href="#inicio"
+              className="text-white hover:text-primary transition-all duration-500 py-2 px-4"
+            >
+              Inicio
+            </a>
+            <a
+              href="#acerca"
+              className="text-white hover:text-primary transition-all duration-500 py-2 px-4"
+            >
+              Acerca de mi
+            </a>
+            <a
+              href="#portafolio"
+              className="text-white hover:text-primary transition-all duration-500 py-2 px-4"
+            >
+              Proyectos
+            </a>
+          </div>
+
+          <Icon
+            name="menu"
+            className="text-2xl cursor-pointer md:hidden"
+            onClick={() => setIsActive(!isActive)}
+          />
+
+          <div className="hidden md:block">
+            <Button>Contactame</Button>
+          </div>
+        </div>
       </header>
     </>
   )
