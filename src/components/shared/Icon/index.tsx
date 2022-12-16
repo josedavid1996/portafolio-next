@@ -7,7 +7,7 @@ import {
   SVGProps
 } from 'react'
 import dynamic from 'next/dynamic'
-export type IconName = 'start' | 'menu' | 'close'
+export type IconName = 'start' | 'menu' | 'close' | 'arrow-down'
 
 // type SVGLazyComponent = LazyExoticComponent<
 //   FunctionComponent<
@@ -29,7 +29,8 @@ interface Props extends SVGProps<SVGSVGElement> {
 const icons: Record<IconName, any> = {
   start: dynamic(() => import('../../../assets/icons/star-regular.svg')),
   menu: dynamic(() => import('@assets/icons/bars-solid.svg')),
-  close: dynamic(() => import('@assets/icons/xmark-solid.svg'))
+  close: dynamic(() => import('@assets/icons/xmark-solid.svg')),
+  'arrow-down': dynamic(() => import('@assets/icons/arrow-down-solid.svg'))
 }
 const Icon = ({ name, ...props }: Props) => {
   const Component = icons[name]

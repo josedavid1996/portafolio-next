@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Hero = () => {
   return (
     <>
-      <section className="home section" id="inicio">
+      <section className="home" id="inicio">
         <article className="bg-center bg-no-repeat bg-[url('/hero.jpg')] bg-cover">
           <aside className=" w-full min-h-screen flex justify-center items-center bg-primary-500">
             <div className="flex justify-center items-center flex-col">
