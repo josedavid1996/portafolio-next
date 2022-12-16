@@ -9,6 +9,9 @@ module.exports = {
   important: true,
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/img/hero.jpg')"
+      },
       colors: {
         primary: {
           50: '#171718',

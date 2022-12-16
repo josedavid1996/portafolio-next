@@ -21,7 +21,7 @@ const Navbar = () => {
           <div
             className={`${
               isActive ? 'left-0' : 'left-[-100%]'
-            } absolute flex flex-col top-[66px] bg-primary-100 right-0  transition-all duration-1000 md:static md:flex-row`}
+            } absolute flex flex-col top-[66px] bg-primary-100 w-full md:w-auto  transition-all duration-1000 md:static md:flex-row bg-primary-50`}
           >
             <a
               href="#inicio"

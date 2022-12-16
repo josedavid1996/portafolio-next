@@ -284,12 +284,12 @@ label > * {
   margin-bottom: 1rem;
   color: var(--color-white);
 }
-.hero___img {
-  /* background-image: url(../img/hero.jpg); */
+/* .hero___img {
+  background-image: url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+} */
 .hero__img__opacity {
   width: 100%;
   min-height: 100vh;
