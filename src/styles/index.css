@@ -463,3 +463,14 @@ article > a {
     font-size: 1.2rem;
   }
 }
+
+.trans {
+  transition: 1.5s;
+  border: 1px solid #373636;
+  background-color: #000;
+  cursor: pointer;
+}
+.trans:hover {
+  background-color: #0404e2 !important;
+  transition: 0s;
+}

@@ -7,7 +7,7 @@ const Navbar = () => {
   const [isActive, setIsActive] = useState(false)
   return (
     <>
-      <header className="w-full ">
+      <header className="w-full sticky top-0 bg-primary-50 ">
         <div className="flex justify-between max-w-5xl mx-auto p-4 relative items-center">
           <a className="logo relative w-[31px] h-[34px]">
             <Image
