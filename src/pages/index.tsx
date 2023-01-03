@@ -1,12 +1,7 @@
-import Hero from '@components/layout/Hero'
-
 const Home = () => {
   return (
     <>
-      {/* <Navbar /> */}
-      <div>
-        <Hero />
-      </div>
+      <div className="text-[60px] font-bold text-white">Inicio</div>
     </>
   )
 }
