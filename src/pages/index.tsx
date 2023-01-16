@@ -1,7 +1,7 @@
 const Home = () => {
   return (
     <>
-      <div className="text-[60px] font-bold text-white">Inicio</div>
+      <div className="text-[60px] font-bold relative">Inicio</div>
     </>
   )
 }
