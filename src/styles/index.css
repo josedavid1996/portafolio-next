@@ -3,6 +3,7 @@
 @tailwind utilities;
 body {
   overflow-x: hidden;
+  background-color: #111111;
 }
 
 /* .redondiado::after {

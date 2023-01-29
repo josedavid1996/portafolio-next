@@ -19,7 +19,7 @@ module.exports = {
           200: '#d90429',
           300: '#8d99ae',
           400: '#2b2d42',
-          DEFAULT: '#ef233c'
+          DEFAULT: '#2196f3'
         }
       },
       fontFamily: {
