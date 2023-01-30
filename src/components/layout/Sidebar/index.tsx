@@ -23,7 +23,7 @@ const variantsIconBottom = {
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <div>
+    <div className="absolute md:static z-20">
       <motion.nav className="relative">
         <motion.ul
           animate={isOpen ? 'open' : 'closed'}

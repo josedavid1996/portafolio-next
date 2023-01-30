@@ -7,7 +7,7 @@ interface Props {
 const Home = ({ titleName, titleNameSpan, titleParagram }: Props) => {
   return (
     <>
-      <div className=" text-white font-bold relative mt-15 w-full ">
+      <div className="pl-[45px] md:pl-0 text-white font-bold relative mt-15 w-full ">
         <h1 className="text-3xl md:text-6xl font-bold text-center">
           {titleName}
           <span className="text-primary">{titleNameSpan}</span>
