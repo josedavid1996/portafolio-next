@@ -3,6 +3,8 @@
     "title": "Contact Page"
   },
   "home": {
-    "title": "Welcome to Next.js"
+    "titleName": "Hi, I'm ",
+    "titleNameSpan": "José David",
+    "titleParagram": "Front End Developer"
   }
 }

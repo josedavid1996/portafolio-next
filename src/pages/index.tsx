@@ -1,12 +1,18 @@
 interface Props {
-  title: string
+  titleName: string
+  titleNameSpan: string
+  titleParagram: string
 }
 
-const Home = ({ title }: Props) => {
+const Home = ({ titleName, titleNameSpan, titleParagram }: Props) => {
   return (
     <>
-      <div className="text-[60px] text-white font-bold relative mt-10">
-        {title}
+      <div className=" text-white font-bold relative mt-15 w-full ">
+        <h1 className="text-3xl md:text-6xl font-bold text-center">
+          {titleName}
+          <span className="text-primary">{titleNameSpan}</span>
+        </h1>
+        <p className="text-center">{titleParagram}</p>
       </div>
     </>
   )
@@ -19,7 +25,9 @@ export async function getStaticProps({ locale }: { locale: string }) {
   console.log(response)
   return {
     props: {
-      title: response.default.home.title
+      titleName: response.default.home.titleName,
+      titleNameSpan: response.default.home.titleNameSpan,
+      titleParagram: response.default.home.titleParagram
     }
   }
 }

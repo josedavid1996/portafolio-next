@@ -18,7 +18,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <main>
       <ApolloProvider client={client}>
         <AnimatePresence>
-          <div className="flex">
+          <div className="flex min-h-screen">
             <Sidebar />
             <div>
               <LenguajeSelector />
