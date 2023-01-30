@@ -5,7 +5,9 @@ interface Props {
 const Home = ({ title }: Props) => {
   return (
     <>
-      <div className="text-[60px] font-bold relative">{title}</div>
+      <div className="text-[60px] text-white font-bold relative mt-10">
+        {title}
+      </div>
     </>
   )
 }
