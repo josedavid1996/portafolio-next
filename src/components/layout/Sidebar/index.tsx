@@ -1,6 +1,7 @@
 import Icon from '@components/shared/Icon'
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 const variants = {
   open: { width: '300px' },
   closed: { width: '50px' }
@@ -22,8 +23,9 @@ const variantsIconBottom = {
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
+
   return (
-    <div className="absolute md:static z-20">
+    <div className="fixed md:static z-20">
       <motion.nav className="relative">
         <motion.ul
           initial={{ width: '50px' }}
@@ -36,14 +38,16 @@ const Sidebar = () => {
             <div className="min-w-40px">
               <Icon name="home" className=" text-[18px] text-[#fff]" />
             </div>
-            <a className=" text-[#fff] font-semibold">Home</a>
+            <a className=" text-[#fff] font-semibold">Inicio</a>
           </li>
-          <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500 max-h-[34px]">
-            <div className="min-w-40px">
-              <Icon name="user" className=" text-[18px] text-[#fff]" />
-            </div>
-            <a className=" text-[#fff] font-semibold ">Acerca de mi</a>
-          </li>
+          <Link href="/about">
+            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500 max-h-[34px]">
+              <div className="min-w-40px">
+                <Icon name="user" className=" text-[18px] text-[#fff]" />
+              </div>
+              <a className=" text-[#fff] font-semibold ">Acerca de mi</a>
+            </li>
+          </Link>
           <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
             <div className="min-w-40px">
               <Icon name="gear" className=" text-[18px] text-[#fff]" />
