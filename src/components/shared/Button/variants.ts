@@ -17,8 +17,7 @@ export const variants: Record<ButtonVariant, ButtonColors> = {
   },
   outline: {
     white: 'btn-outline-white',
-    primary:
-      'text-primary border-primary border hover:bg-primary hover:text-white ',
+    primary: 'bg-transparent hover:border-transparent hover:bg-primary ',
     secondary: 'btn-outline-secondary'
   },
   ghost: {

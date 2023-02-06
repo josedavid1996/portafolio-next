@@ -1,3 +1,5 @@
+import Button from '@components/shared/Button'
+
 interface Props {
   titleName: string
   titleNameSpan: string
@@ -7,12 +9,20 @@ interface Props {
 const Home = ({ titleName, titleNameSpan, titleParagram }: Props) => {
   return (
     <>
-      <div className="pl-[45px] md:pl-0 text-white font-bold relative mt-15 w-full ">
-        <h1 className="text-3xl md:text-6xl font-bold text-center">
-          {titleName}
-          <span className="text-primary">{titleNameSpan}</span>
-        </h1>
-        <p className="text-center">{titleParagram}</p>
+      <div className="bg-img bg-cover text-white  md:bg-center bg-no-repeat bg-[url('/hero.jpg')] pl-[45px] md:pl-0 w-full flex sm:items-center justify-center sm:justify-start">
+        <div className="relative w-full flex flex-col items-center  gap-4  pt-30 sm:pt-0 max-w-[415px] ">
+          <h1 className="text-3xl font-light sm:text-6xl text-center  flex flex-col uppercase ml-5">
+            {titleName}
+            <span className="text-primary font-black">{titleNameSpan}</span>
+            <p className="uppercase text-xs md:text-sm font-light">
+              {titleParagram}
+            </p>
+          </h1>
+          <div className="flex gap-2 ">
+            <Button variant="outline">Contactame</Button>
+            <Button variant="outline">Contactame</Button>
+          </div>
+        </div>
       </div>
     </>
   )

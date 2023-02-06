@@ -16,9 +16,9 @@ interface Props extends HTMLMotionProps<'button'> {
 }
 
 const btnIcon =
-  'border-[1.5px] w-[35px] h-[35px] outline-none rounded grid place-items-center cursor-pointer'
+  'border-[1.5px] w-[35px] h-[35px] outline-none rounded-full grid place-items-center cursor-pointer'
 const btn =
-  'flex items-center justify-center gap-3 border-[1.5px] py-2 px-8 font-medium outline-none rounded cursor-pointer'
+  'flex items-center justify-center gap-3 border-[1.5px] py-2 px-4 md:px-8 font-medium outline-none rounded-full cursor-pointer'
 
 const Button = (
   { isIcon, isLoading, color = 'primary', variant = 'solid', ...props }: Props,

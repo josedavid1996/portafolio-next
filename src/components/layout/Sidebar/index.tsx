@@ -26,6 +26,7 @@ const Sidebar = () => {
     <div className="absolute md:static z-20">
       <motion.nav className="relative">
         <motion.ul
+          initial={{ width: '50px' }}
           animate={isOpen ? 'open' : 'closed'}
           variants={variants}
           transition={{ duration: 0.5 }}

@@ -26,6 +26,7 @@ module.exports = {
         sans: `"DM Sans", ${defaultTheme.fontFamily.sans.join(',')}`,
         mono: `"IBM Plex Mono", ${defaultTheme.fontFamily.mono.join(',')}`
       },
+
       spacing: {
         13: '3.25rem',
         15: '3.75rem',
