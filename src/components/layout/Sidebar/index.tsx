@@ -40,7 +40,7 @@ const Sidebar = () => {
             </div>
             <a className=" text-[#fff] font-semibold">Inicio</a>
           </li>
-          <Link href="/about">
+          <Link href="/about" passHref>
             <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500 max-h-[34px]">
               <div className="min-w-40px">
                 <Icon name="user" className=" text-[18px] text-[#fff]" />
@@ -48,12 +48,14 @@ const Sidebar = () => {
               <a className=" text-[#fff] font-semibold ">Acerca de mi</a>
             </li>
           </Link>
-          <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
-            <div className="min-w-40px">
-              <Icon name="gear" className=" text-[18px] text-[#fff]" />
-            </div>
-            <a className=" text-[#fff] font-semibold">Especialidades</a>
-          </li>
+          <Link href="/specialties" passHref>
+            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
+              <div className="min-w-40px">
+                <Icon name="gear" className=" text-[18px] text-[#fff]" />
+              </div>
+              <a className=" text-[#fff] font-semibold">Especialidades</a>
+            </li>
+          </Link>
           <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
             <div className="min-w-40px">
               <Icon name="project" className=" text-[18px] text-[#fff]" />

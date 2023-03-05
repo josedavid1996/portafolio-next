@@ -19,7 +19,7 @@ const sizes: Record<Size, string> = {
   xl: 'title-4',
   lg: 'title-5',
   md: 'title-6',
-  sm: 'title-7',
+  sm: 'text-[22px] md:text-[32px]',
   xs: 'title-8'
 }
 
