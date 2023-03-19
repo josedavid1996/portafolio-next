@@ -2,6 +2,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Icon, { IconName } from '@components/shared/Icon'
 import Heading from '@components/shared/Heading'
+import LayoutPage from '@components/layout/LayoutPage'
 
 const logos = [
   {
@@ -54,10 +55,7 @@ const logos = [
 const Specialties = () => {
   return (
     <>
-      <div className="pl-[62px] mt-[50px]  md:mt-[80px] pr-3 md:p-5 text-white w-full">
-        <h1 className="text-2xl text-primary  sm:text-5xl mb-7  uppercase  font-black  text-left ">
-          Especialidades
-        </h1>
+      <LayoutPage title={'especialidades'}>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-15 w-full ">
           {logos.map((item) => (
             <div key={item.nombre}>
@@ -92,8 +90,9 @@ const Specialties = () => {
             </div>
           ))}
         </div>
+      </LayoutPage>
 
-        {/* <div className="w-[130px] h-[130px] relative">
+      {/* <div className="w-[130px] h-[130px] relative">
           <motion.div
             className="box w-full h-full border-2 border-primary "
             animate={{
@@ -115,7 +114,6 @@ const Specialties = () => {
           />
           <Heading>React</Heading>
         </div> */}
-      </div>
     </>
   )
 }

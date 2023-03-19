@@ -34,3 +34,39 @@ body {
   border-top-left-radius: 50%;
   position: absolute;
 } */
+.card {
+  position: relative;
+
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  background: #1c1b29;
+}
+
+.card::before {
+  content: '';
+  background-image: conic-gradient(#04b0ee 20deg, transparent 120deg);
+  height: 150%;
+  width: 150%;
+  position: absolute;
+  left: -25%;
+  top: -25%;
+  animation: rotate 2s infinite linear;
+}
+
+.card::after {
+  content: '';
+  height: 94%;
+  width: 94%;
+  position: absolute;
+  background: #1c1b29;
+  /* background-image: url('/avatar.png'); */
+  border-radius: 5px;
+  top: 3%;
+  left: 3%;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
