@@ -18,6 +18,7 @@ const LenguajeSelector = () => {
           width={35}
           height={30}
           onClick={() => changeLenguaje('es')}
+          alt="es"
         />
         <Image
           className="cursor-pointer"
@@ -26,6 +27,7 @@ const LenguajeSelector = () => {
           height={30}
           objectFit="contain"
           onClick={() => changeLenguaje('en')}
+          alt="en"
         />
         <Image
           className="cursor-pointer"
@@ -33,6 +35,7 @@ const LenguajeSelector = () => {
           width={35}
           height={30}
           onClick={() => changeLenguaje('fr')}
+          alt="fr"
         />
       </div>
       {/* <select onChange={changeLenguaje}>

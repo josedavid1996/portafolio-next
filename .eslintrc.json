@@ -17,6 +17,8 @@
     "react/react-in-jsx-scope": "off",
     "@next/next/no-document-import-in-page": "off",
     "no-use-before-define": "off",
+    "indent": "off",
+    "eslint-disable-next-line": "off",
     "space-before-function-paren": "off"
   }
 }

@@ -1,7 +1,12 @@
-import Icon from '@components/shared/Icon'
 import { useState } from 'react'
-import { motion } from 'framer-motion'
+
 import Link from 'next/link'
+import { useRouter } from 'next/router'
+
+import { motion } from 'framer-motion'
+
+import Icon from '@components/shared/Icon'
+
 const variants = {
   open: { width: '300px' },
   closed: { width: '50px' }
@@ -24,9 +29,17 @@ const variantsIconBottom = {
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
+  const { locale } = useRouter()
+
+  // const refSadibar = useRef(null)
+
   return (
     <div className="fixed md:static  min-h-full top-0 bottom-0 z-30">
-      <motion.nav className="relative min-h-full flex">
+      <motion.nav
+        className="relative min-h-full flex cursor-pointer"
+        onMouseEnter={(e) => setIsOpen(true)}
+        onMouseLeave={(e) => setIsOpen(false)}
+      >
         <motion.ul
           initial={{ width: '50px' }}
           animate={isOpen ? 'open' : 'closed'}
@@ -62,7 +75,13 @@ const Sidebar = () => {
               <div className="min-w-40px">
                 <Icon name="home" className=" text-[18px] text-[#fff]" />
               </div>
-              <a className=" text-[#fff] font-semibold">Inicio</a>
+              <a className=" text-[#fff] font-semibold">
+                {locale === 'es'
+                  ? 'Inicio'
+                  : locale === 'en'
+                  ? 'Home'
+                  : 'Début'}
+              </a>
             </li>
           </Link>
           <Link href="/about" passHref>
@@ -70,7 +89,13 @@ const Sidebar = () => {
               <div className="min-w-40px">
                 <Icon name="user" className=" text-[18px] text-[#fff]" />
               </div>
-              <a className=" text-[#fff] font-semibold ">Acerca de mi</a>
+              <a className=" text-[#fff] font-semibold ">
+                {locale === 'es'
+                  ? 'Acerca de mi'
+                  : locale === 'en'
+                  ? 'About'
+                  : 'Sur moi'}
+              </a>
             </li>
           </Link>
           <Link href="/specialties" passHref>
@@ -78,7 +103,13 @@ const Sidebar = () => {
               <div className="min-w-40px">
                 <Icon name="gear" className=" text-[18px] text-[#fff]" />
               </div>
-              <a className=" text-[#fff] font-semibold">Especialidades</a>
+              <a className=" text-[#fff] font-semibold">
+                {locale === 'es'
+                  ? 'Especialidades'
+                  : locale === 'en'
+                  ? 'Specialties'
+                  : 'Spécialités'}
+              </a>
             </li>
           </Link>
           <Link href="/project" passHref>
@@ -86,7 +117,13 @@ const Sidebar = () => {
               <div className="min-w-40px">
                 <Icon name="project" className=" text-[18px] text-[#fff]" />
               </div>
-              <a className=" text-[#fff] font-semibold">Proyectos</a>
+              <a className=" text-[#fff] font-semibold">
+                {locale === 'es'
+                  ? 'Proyectos'
+                  : locale === 'en'
+                  ? 'Projects'
+                  : 'Projets'}
+              </a>
             </li>
           </Link>
           <Link href="/contact" passHref>
@@ -94,7 +131,14 @@ const Sidebar = () => {
               <div className="min-w-40px">
                 <Icon name="contact" className=" text-[18px] text-[#fff]" />
               </div>
-              <a className=" text-[#fff] font-semibold">Contacto</a>
+              <a className=" text-[#fff] font-semibold">
+                Contacto
+                {locale === 'es'
+                  ? 'Contacto'
+                  : locale === 'en'
+                  ? 'Contact'
+                  : 'Contact'}
+              </a>
             </li>
           </Link>
         </motion.ul>
