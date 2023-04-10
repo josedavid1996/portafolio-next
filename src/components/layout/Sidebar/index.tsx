@@ -57,12 +57,14 @@ const Sidebar = () => {
               transition={{ duration: 0.5 }}
             ></motion.div>
           </span>
-          <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
-            <div className="min-w-40px">
-              <Icon name="home" className=" text-[18px] text-[#fff]" />
-            </div>
-            <a className=" text-[#fff] font-semibold">Inicio</a>
-          </li>
+          <Link href="/" passHref>
+            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
+              <div className="min-w-40px">
+                <Icon name="home" className=" text-[18px] text-[#fff]" />
+              </div>
+              <a className=" text-[#fff] font-semibold">Inicio</a>
+            </li>
+          </Link>
           <Link href="/about" passHref>
             <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500 max-h-[34px]">
               <div className="min-w-40px">
@@ -87,12 +89,14 @@ const Sidebar = () => {
               <a className=" text-[#fff] font-semibold">Proyectos</a>
             </li>
           </Link>
-          <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
-            <div className="min-w-40px">
-              <Icon name="contact" className=" text-[18px] text-[#fff]" />
-            </div>
-            <a className=" text-[#fff] font-semibold">Contacto</a>
-          </li>
+          <Link href="/contact" passHref>
+            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
+              <div className="min-w-40px">
+                <Icon name="contact" className=" text-[18px] text-[#fff]" />
+              </div>
+              <a className=" text-[#fff] font-semibold">Contacto</a>
+            </li>
+          </Link>
         </motion.ul>
       </motion.nav>
     </div>

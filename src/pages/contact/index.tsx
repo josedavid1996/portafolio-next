@@ -36,7 +36,23 @@ const pathVariants = {
   }
 }
 
-const Contact = () => {
+interface Props {
+  titleName: string
+  sendParagram: string
+  labelFirst: string
+  labelSecond: string
+  labelThird: string
+  textButton: string
+}
+
+const Contact = ({
+  titleName,
+  sendParagram,
+  labelFirst,
+  labelSecond,
+  labelThird,
+  textButton
+}: Props) => {
   const [isOpen, setIsOpen] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
@@ -69,7 +85,7 @@ const Contact = () => {
     console.log(data)
   }
   return (
-    <LayoutPage title="Contacto" className="relative w-full ">
+    <LayoutPage title={titleName} className="relative w-full ">
       <motion.div
         animate={isOpen ? 'open' : 'closed'}
         initial={{
@@ -130,8 +146,7 @@ const Contact = () => {
         </div>
 
         <Text color="white" className="mb-5 text-center">
-          Si estás interesado en mi trabajo o tienes alguna inquietud, no dudes
-          en escribirme!
+          {sendParagram}
         </Text>
         <form
           onSubmit={form.onSubmit(handleSubmit)}
@@ -139,26 +154,26 @@ const Contact = () => {
         >
           <Input
             autoComplete="off"
-            label="Tu Nombre"
+            label={labelFirst}
             {...form.inputProps('nombre')}
           />
           <Input
             autoComplete="off"
-            label="Tu E-mail"
+            label={labelSecond}
             {...form.inputProps('correo')}
           />
 
           <TextTarea
             rows={5}
             className="h-full"
-            label="Tu Mensaje"
+            label={labelThird}
             name="mensaje"
             value={values.mensaje}
             onChange={(e) => setField('mensaje', e.target.value)}
           ></TextTarea>
 
           <Button isLoading={isLoading} type="submit">
-            Enviar
+            {textButton}
           </Button>
         </form>
       </div>
@@ -167,3 +182,18 @@ const Contact = () => {
 }
 
 export default Contact
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  const response = await import(`../../lang/${locale}.json`)
+
+  return {
+    props: {
+      titleName: response.default.contact.titleName,
+      sendParagram: response.default.contact.sendParagram,
+      labelFirst: response.default.contact.labelFirst,
+      labelSecond: response.default.contact.labelSecond,
+      labelThird: response.default.contact.labelThird,
+      textButton: response.default.contact.textButton
+    }
+  }
+}

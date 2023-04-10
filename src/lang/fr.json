@@ -1,10 +1,26 @@
 {
-  "contact": {
-    "title": "Contact Page"
-  },
   "home": {
     "titleName": "Je, suis ",
     "titleNameSpan": "José David",
-    "titleParagram": "Développeur frontal"
+    "titleParagram": "Développeur frontal",
+    "textButton": "Contactez moi"
+  },
+  "about": {
+    "titleName": "Sur moi",
+    "paragram": "Bonjour, je m'appelle Jose David, je suis un développeur frontend talentueux avec plus de deux ans d'expérience dans le domaine. Je me distingue par mes compétences pour travailler avec des technologies telles que HTML, CSS, JavaScript et différents frameworks, j'ai également la capacité de résoudre des problèmes et de penser de manière créative. De plus, je travaille en étroite collaboration avec ses coéquipiers et ses clients pour m'assurer que les solutions répondent à leurs besoins et attentes. Pendant mon temps libre, j'aime être à l'extérieur, marcher et voyager pour découvrir de nouveaux endroits et de nouvelles cultures, ce qui me permet d'apprendre de nouvelles choses et d'élargir mes horizons."
+  },
+  "specialties": {
+    "titleName": "Spécialités"
+  },
+  "project": {
+    "titleName": "Projets"
+  },
+  "contact": {
+    "titleName": "contact",
+    "sendParagram": "Si vous êtes intéressé par mon travail ou avez des inquiétudes, n'hésitez pas à m'écrire",
+    "labelFirst": "Ton nom",
+    "labelSecond": "Ton E-mail",
+    "labelThird": "Ton Message",
+    "textButton": "Envoyer"
   }
 }

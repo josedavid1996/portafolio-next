@@ -52,10 +52,14 @@ const logos = [
   }
 ]
 
-const Specialties = () => {
+interface Props {
+  titleName: string
+}
+
+const Specialties = ({ titleName }: Props) => {
   return (
     <>
-      <LayoutPage title={'especialidades'}>
+      <LayoutPage title={titleName} className="w-full">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-15 w-full ">
           {logos.map((item) => (
             <div key={item.nombre}>
@@ -91,31 +95,18 @@ const Specialties = () => {
           ))}
         </div>
       </LayoutPage>
-
-      {/* <div className="w-[130px] h-[130px] relative">
-          <motion.div
-            className="box w-full h-full border-2 border-primary "
-            animate={{
-              scale: [1, 1.2, 1.2, 1, 1],
-              rotate: [0, 0, 180, 180, 0],
-              borderRadius: ['10%', '10%', '50%', '50%', '10%']
-            }}
-            transition={{
-              duration: 2,
-              ease: 'easeInOut',
-              times: [0, 0.2, 0.5, 0.8, 1],
-              repeat: Infinity,
-              repeatDelay: 1
-            }}
-          ></motion.div>
-          <Icon
-            name="html"
-            className="w-[60%] h-[60%] text-primary absolute top-[20%] left-[20%]"
-          />
-          <Heading>React</Heading>
-        </div> */}
     </>
   )
 }
 
 export default Specialties
+
+export async function getStaticProps({ locale }: { locale: string }) {
+  const response = await import(`../../lang/${locale}.json`)
+
+  return {
+    props: {
+      titleName: response.default.specialties.titleName
+    }
+  }
+}
