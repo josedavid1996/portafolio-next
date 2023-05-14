@@ -56,13 +56,13 @@ body {
 
 .card::after {
   content: '';
-  height: 94%;
+  height: 90%;
   width: 94%;
   position: absolute;
   background: #1c1b29;
   /* background-image: url('/avatar.png'); */
   border-radius: 5px;
-  top: 3%;
+  top: 5%;
   left: 3%;
 }
 @keyframes rotate {

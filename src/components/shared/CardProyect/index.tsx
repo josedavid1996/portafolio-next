@@ -14,7 +14,7 @@ const CardProyect: FC<Props> = ({ title, date, description, link, img }) => {
   return (
     <div className="h-full">
       <div
-        className={`card ${img} after:bg-cover after:bg-no-repeat aspect-[1/1] `}
+        className={`card ${img} after:bg-cover after:bg-center after:bg-no-repeat aspect-[2/1] `}
       ></div>
 
       {/* Description Text */}
@@ -24,7 +24,7 @@ const CardProyect: FC<Props> = ({ title, date, description, link, img }) => {
           <p className="font-bold text-sm text-primary">{date}</p>
         </div>
         <p className="text-sm sm:text-base">{description}</p>
-        <Link href={link} passHref>
+        <Link href={link} passHref target="_blank">
           <Button variant="solid" className="mx-auto">
             Ver
           </Button>

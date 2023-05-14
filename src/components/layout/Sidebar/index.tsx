@@ -132,7 +132,6 @@ const Sidebar = () => {
                 <Icon name="contact" className=" text-[18px] text-[#fff]" />
               </div>
               <a className=" text-[#fff] font-semibold">
-                Contacto
                 {locale === 'es'
                   ? 'Contacto'
                   : locale === 'en'
