@@ -20,7 +20,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   images: {
-    domains: ['images.pexels.com']
+    domains: ['images.pexels.com', 'jluseanrggkztvghetlz.supabase.co']
   }
 }
 

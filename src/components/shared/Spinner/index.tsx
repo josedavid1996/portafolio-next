@@ -4,6 +4,7 @@ type Color = 'primary' | 'secondary' | 'white'
 
 interface Props {
   color?: Color
+  className?: string
 }
 
 const colors: Record<Color, string> = {
@@ -14,12 +15,13 @@ const colors: Record<Color, string> = {
     'border-t-secondary-300 dark:border-t-secondary-500 border-l-secondary-300 dark:border-l-secondary-500'
 }
 
-const Spinner = ({ color = 'primary' }: Props) => {
+const Spinner = ({ color = 'primary', className }: Props) => {
   return (
     <div
       className={classNames([
         colors[color],
-        'h-[21px] w-[21px] rounded-[50%] border-[3.5px] border-r-transparent border-b-transparent animate-spin'
+        className,
+        'h-[40px] w-[40px] rounded-[50%] border-[4px] border-r-transparent border-b-transparent animate-spin mx-auto'
       ])}
     />
   )
