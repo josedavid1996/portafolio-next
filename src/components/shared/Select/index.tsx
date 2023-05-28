@@ -2,7 +2,7 @@ import { useState, ChangeEvent, SelectHTMLAttributes, useMemo } from 'react'
 import Input from '../Input'
 
 import { classNames, isEmpty } from '../../../utils'
-import { IconChevronDown } from '../../../icons/IconChevronDown'
+import Icon from '../Icon'
 
 interface OptionProps {
   desc?: string
@@ -72,7 +72,8 @@ const Select = ({ label, options, ...props }: Props) => {
               className="btn-icon btn-ghost-primary"
               onClick={() => setIsOpen((prev) => !prev)}
             >
-              <IconChevronDown
+              <Icon
+                name="arrow-down"
                 className={classNames([
                   isOpen ? 'rotate-180' : 'rotate-0',
                   'transition-transform'
