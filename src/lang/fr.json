@@ -3,7 +3,8 @@
     "titleName": "Je, suis ",
     "titleNameSpan": "José David",
     "titleParagram": "Développeur frontal",
-    "textButton": "Contactez moi"
+    "textButton": "Contactez moi",
+    "downloadButton": "Décharge CV"
   },
   "about": {
     "titleName": "Sur moi",

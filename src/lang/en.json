@@ -3,7 +3,8 @@
     "titleName": "Hi, I'm ",
     "titleNameSpan": "José David",
     "titleParagram": "Front End Developer",
-    "textButton": "Contact me"
+    "textButton": "Contact me",
+    "downloadButton": "Download CV"
   },
   "about": {
     "titleName": "About",

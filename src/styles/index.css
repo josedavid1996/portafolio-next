@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;600;700;800;900&family=Inter&family=Montserrat:wght@400;500;600;700;900&display=swap');
+@import '../assets/fonts/montserrat/montserrat.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,28 +12,6 @@ body {
   background-position: 65% 50%;
 }
 
-/* .redondiado::after {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 40px;
-  background-color: white;
-  top: 0;
-  left: 0;
-  border-bottom-left-radius: 50%;
-  position: absolute;
-} */
-/* .redondiado::before {
-  content: '';
-  display: block;
-  width: 50px;
-  height: 40px;
-  background-color: white;
-  bottom: 0;
-  left: 0;
-  border-top-left-radius: 50%;
-  position: absolute;
-} */
 .card {
   position: relative;
 

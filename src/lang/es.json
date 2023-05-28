@@ -3,7 +3,8 @@
     "titleName": "Hola, soy ",
     "titleNameSpan": "José David",
     "titleParagram": "Desarrollador Frontend",
-    "textButton": "Contactame"
+    "textButton": "Contactame",
+    "downloadButton": "Descargar CV"
   },
   "about": {
     "titleName": "Acerca de mi",
