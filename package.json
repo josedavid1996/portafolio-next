@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.1",
+    "@supabase/supabase-js": "^2.22.0",
     "formik": "^2.2.9",
     "framer-motion": "^7.6.6",
     "graphql": "^16.6.0",
