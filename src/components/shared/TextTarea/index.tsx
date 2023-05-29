@@ -52,7 +52,7 @@ const TextTarea = ({
           className={classNames([
             error
               ? 'border-red-400 focus:border-red-600'
-              : 'border-transparent focus:border-primary-500',
+              : ' focus:border-primary-500',
             'peer bg-transparent outline-none w-full h-full  px-3 border-2 transition-colors py-3 border-primary-500 rounded-md'
           ])}
         ></textarea>
