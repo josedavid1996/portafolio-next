@@ -10,6 +10,9 @@ import Sidebar from '@components/layout/Sidebar'
 import { AnimatePresence } from 'framer-motion'
 
 import LenguajeSelector from '@components/shared/LenguajeSelector'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import Head from 'next/head'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   // Servicio para cargar el theme desde el LocalStorage
@@ -20,6 +23,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       <ApolloProvider client={client}>
         <AnimatePresence>
           <div className="flex min-h-screen">
+            <Head>
+              <title>Jose David</title>
+            </Head>
             <Sidebar />
             <div>
               <LenguajeSelector />
@@ -27,6 +33,17 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
             <Component {...pageProps} />
           </div>
         </AnimatePresence>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
       </ApolloProvider>
     </main>
   )

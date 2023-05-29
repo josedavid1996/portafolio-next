@@ -65,7 +65,7 @@ const TextTarea = ({
             error
               ? 'text-red-600'
               : 'peer-focus:text-primary-500 peer-focus:top-[-13px] peer-focus:bg-[#111111] peer-focus:px-2',
-            'absolute peer-focus:top-1 peer-focus:left-2 transition-all '
+            'absolute peer-focus:top-[-12px] peer-focus:left-2 transition-all '
           ])}
         >
           {label}

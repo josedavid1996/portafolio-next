@@ -1,3 +1,4 @@
+import { classNames, isEmpty } from '@utils/index'
 import {
   ChangeEvent,
   InputHTMLAttributes,
@@ -6,8 +7,6 @@ import {
   useId,
   useState
 } from 'react'
-
-import { isEmpty, classNames } from '../../../utils'
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label?: string
@@ -49,20 +48,20 @@ const Input = ({ label, icon: Icon, rightElement, ...props }: Props) => {
           className={classNames([
             error
               ? 'border-red-400 focus:border-red-600'
-              : 'border-transparent focus:border-primary-500',
-            'peer bg-transparent outline-none w-full h-full  px-3 border-2 transition-colors py-3 border-primary-500 rounded-md'
+              : ' focus:border-primary',
+            'peer bg-transparent outline-none w-full h-full px-3 border-2 transition-colors py-3 border-primary rounded-md text-white '
           ])}
         />
         <label
           htmlFor={`input-${uid}`}
           className={classNames([
-            isValueEmpty
+            isValueEmpty && props.type !== 'date'
               ? 'top-[10px] left-3 bg-transparent text-primary'
-              : 'top-[-12px] left-2 text-primary-500 bg-[#111111] px-2',
+              : 'top-[-12px] left-2 text-primary bg-[#111111] px-2',
             error
               ? 'text-red-600'
-              : 'peer-focus:text-primary-500 peer-focus:top-[-12px] peer-focus:bg-[#111111] peer-focus:px-2',
-            'absolute peer-focus:top-1 peer-focus:left-2 transition-all '
+              : 'peer-focus:text-primary peer-focus:top-[-12px] peer-focus:bg-[#111111] peer-focus:px-2',
+            'absolute peer-focus:top-[-12px] peer-focus:left-2 transition-all '
           ])}
         >
           {label}
