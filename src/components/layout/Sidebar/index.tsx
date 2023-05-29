@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -30,14 +30,11 @@ const variantsIconBottom = {
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const { locale, pathname } = useRouter()
-  useEffect(() => {
-    if (!isMobile) {
-      setIsOpen(false)
-    }
-  }, [pathname])
+  const { locale } = useRouter()
 
   // const refSadibar = useRef(null)
+
+  console.log(isMobile())
 
   return (
     <div className="fixed md:static  min-h-full top-0 bottom-0 z-30">
@@ -76,8 +73,16 @@ const Sidebar = () => {
               transition={{ duration: 0.5 }}
             ></motion.div>
           </span>
+
           <Link href="/" passHref>
-            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
+            <li
+              className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500"
+              onClick={() => {
+                if (isMobile()) {
+                  setIsOpen(false)
+                }
+              }}
+            >
               <div className="min-w-40px">
                 <Icon name="home" className=" text-[18px] text-[#fff]" />
               </div>
@@ -90,8 +95,16 @@ const Sidebar = () => {
               </a>
             </li>
           </Link>
+
           <Link href="/about" passHref>
-            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500 max-h-[34px]">
+            <li
+              className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500 max-h-[34px]"
+              onClick={() => {
+                if (isMobile()) {
+                  setIsOpen(false)
+                }
+              }}
+            >
               <div className="min-w-40px">
                 <Icon name="user" className=" text-[18px] text-[#fff]" />
               </div>
@@ -104,8 +117,16 @@ const Sidebar = () => {
               </a>
             </li>
           </Link>
+
           <Link href="/specialties" passHref>
-            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
+            <li
+              className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500"
+              onClick={() => {
+                if (isMobile()) {
+                  setIsOpen(false)
+                }
+              }}
+            >
               <div className="min-w-40px">
                 <Icon name="gear" className=" text-[18px] text-[#fff]" />
               </div>
@@ -119,7 +140,14 @@ const Sidebar = () => {
             </li>
           </Link>
           <Link href="/project" passHref>
-            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
+            <li
+              className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500"
+              onClick={() => {
+                if (isMobile()) {
+                  setIsOpen(false)
+                }
+              }}
+            >
               <div className="min-w-40px">
                 <Icon name="project" className=" text-[18px] text-[#fff]" />
               </div>
@@ -133,7 +161,14 @@ const Sidebar = () => {
             </li>
           </Link>
           <Link href="/contact" passHref>
-            <li className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500">
+            <li
+              className="flex gap-3 items-center bg-primary px-[8px] py-[5px] rounded-[8px] overflow-hidden hover:bg-[#2195f3c6] cursor-pointer transition-all duration-500"
+              onClick={() => {
+                if (isMobile()) {
+                  setIsOpen(false)
+                }
+              }}
+            >
               <div className="min-w-40px">
                 <Icon name="contact" className=" text-[18px] text-[#fff]" />
               </div>
