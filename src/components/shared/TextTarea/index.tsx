@@ -60,7 +60,7 @@ const TextTarea = ({
           htmlFor={`input-${uid}`}
           className={classNames([
             isValueEmpty
-              ? 'top-[10px] left-3 bg-transparent text-primary'
+              ? 'top-[10px] left-3  text-primary'
               : 'top-[-12px] left-2 text-primary-500 bg-[#111111] px-2',
             error
               ? 'text-red-600'

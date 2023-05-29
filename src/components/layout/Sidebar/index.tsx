@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -6,6 +6,7 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
 import Icon from '@components/shared/Icon'
+import { isMobile } from '@utils/isMobile'
 
 const variants = {
   open: { width: '300px' },
@@ -29,7 +30,12 @@ const variantsIconBottom = {
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const { locale } = useRouter()
+  const { locale, pathname } = useRouter()
+  useEffect(() => {
+    if (!isMobile) {
+      setIsOpen(false)
+    }
+  }, [pathname])
 
   // const refSadibar = useRef(null)
 
