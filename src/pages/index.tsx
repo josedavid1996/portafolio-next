@@ -33,7 +33,7 @@ const Home = ({
             <Button variant="solid" onClick={() => push('/contact')}>
               {textButton}
             </Button>
-            <a href="/cv.pdf" download="jose-david-cv">
+            <a href="/jose-david-cv.pdf" download="jose-david-cv">
               <Button variant="outline">{downloadButton}</Button>
             </a>
           </div>
