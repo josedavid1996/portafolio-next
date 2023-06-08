@@ -34,8 +34,6 @@ const Sidebar = () => {
 
   // const refSadibar = useRef(null)
 
-  console.log(isMobile())
-
   return (
     <div className="fixed md:static  min-h-full top-0 bottom-0 z-30">
       <motion.nav
